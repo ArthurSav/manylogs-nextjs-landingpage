@@ -1,16 +1,80 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@font-face {
+  font-family: "Thicccboi Bold";
+  src: url("/assets/fonts/THICCCBOI-Bold.woff2") format("woff2"),
+    url("/assets/fonts/THICCCBOI-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: "Thicccboi Black";
+  src: url("/assets/fonts/THICCCBOI-Black.woff2") format("woff2"),
+    url("/assets/fonts/THICCCBOI-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: "Thicccboi Medium";
+  src: url("/assets/fonts/THICCCBOI-Medium.woff2") format("woff2"),
+    url("/assets/fonts/THICCCBOI-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Thicccboi AF";
+  src: url("/assets/fonts/THICCCBOI-ThicccAF.woff2") format("woff2"),
+    url("/assets/fonts/THICCCBOI-ThicccAF.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Thicccboi Light";
+  src: url("/assets/fonts/THICCCBOI-Light.woff2") format("woff2"),
+    url("/assets/fonts/THICCCBOI-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Thicccboi Regular";
+  src: url("/assets/fonts/THICCCBOI-Regular.woff2") format("woff2"),
+    url("/assets/fonts/THICCCBOI-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Thicccboi ExtraBold";
+  src: url("/assets/fonts/THICCCBOI-ExtraBold.woff2") format("woff2"),
+    url("/assets/fonts/THICCCBOI-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Thicccboi SemiBold";
+  src: url("/assets/fonts/THICCCBOI-SemiBold.woff2") format("woff2"),
+    url("/assets/fonts/THICCCBOI-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Thicccboi Thin";
+  src: url("/assets/fonts/THICCCBOI-Thin.woff2") format("woff2"),
+    url("/assets/fonts/THICCCBOI-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
 }
