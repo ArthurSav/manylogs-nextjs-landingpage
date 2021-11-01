@@ -14,13 +14,16 @@ export const theme = deepMerge(grommet, {
   global: {
     colors: {
       background: {
-        dark: "dark-1",
+        dark: "dark-0",
         light: "light-1",
       },
       brand: {
         dark: "#7700cc",
         light: "#6600cc",
       },
+      "accent-1": "#31ddab",
+      "accent-2": "#621e95",
+      "dark-0": "#0f0f11",
     },
     font: {
       family: "Thicccboi Medium",

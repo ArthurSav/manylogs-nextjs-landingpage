@@ -54,63 +54,63 @@ export const CustomFonts = () => (
     />
     <link
       rel="preload"
-      href="THICCCBOI-Bold.woff2"
+      href="assets/fonts/THICCCBOI-Bold.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="true"
     />
     <link
       rel="preload"
-      href="THICCCBOI-Medium.woff2"
+      href="assets/fonts/THICCCBOI-Medium.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="true"
     />
     <link
       rel="preload"
-      href="THICCCBOI-ThicccAF.woff2"
+      href="assets/fonts/THICCCBOI-ThicccAF.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="true"
     />
     <link
       rel="preload"
-      href="THICCCBOI-Medium.woff2"
+      href="assets/fonts/THICCCBOI-Medium.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="true"
     />
     <link
       rel="preload"
-      href="THICCCBOI-Light.woff2"
+      href="assets/fonts/THICCCBOI-Light.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="true"
     />
     <link
       rel="preload"
-      href="THICCCBOI-Regular.woff2"
+      href="assets/fonts/THICCCBOI-Regular.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="true"
     />
     <link
       rel="preload"
-      href="THICCCBOI-ExtraBold.woff2"
+      href="assets/fonts/THICCCBOI-ExtraBold.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="true"
     />
     <link
       rel="preload"
-      href="THICCCBOI-SemiBold.woff2"
+      href="assets/fonts/THICCCBOI-SemiBold.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="true"
     />
     <link
       rel="preload"
-      href="THICCCBOI-Thin.woff2"
+      href="assets/fonts/THICCCBOI-Thin.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="true"

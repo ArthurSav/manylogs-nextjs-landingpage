@@ -1,4 +1,13 @@
-import { Box, Heading, Anchor, Header, Nav, Text, ThemeContext } from "grommet";
+import {
+  Box,
+  Heading,
+  Anchor,
+  Header,
+  Nav,
+  Text,
+  ThemeContext,
+  Image,
+} from "grommet";
 import { Ad } from "grommet-icons";
 import Head from "next/head";
 import { styleHeading1, styleHeading2 } from "./theme";
@@ -15,7 +24,7 @@ export default function Home() {
         <title>Manylogs - Record, Replay and edit your api responses</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box fill="vertical" background="background-contrast" flex="grow">
+      <Box fill="vertical" flex="grow">
         <SectionNavbar />
         <SectionHero />
       </Box>
@@ -32,17 +41,17 @@ const SectionNavbar = () => {
       justify="between"
       gap="medium"
       fill="horizontal"
-      background={{ color: "black" }}
       pad="small"
     >
       <Box
         align="center"
         justify="center"
         direction="row-responsive"
-        gap="small"
+        width="small"
+        round="8px"
+        pad="small"
       >
-        <Ad color="accent-1" size="large" />
-        <Heading level="2">Manylogs</Heading>
+        <Image src="/assets/manylogs_full_logo_color_1.svg" fit="contain" />
       </Box>
       <Nav align="center" flex={false} direction="row">
         <Anchor label="Log in" color="light-1" />
@@ -58,7 +67,7 @@ const SectionHero = () => {
       align="center"
       justify="center"
       margin={{ top: "xlarge" }}
-      pad={{ horizontal: "large" }}
+      // pad={{ horizontal: "large" }}
     >
       <ThemeContext.Extend value={styleHeading1}>
         <Heading margin="none" textAlign="center" size="large">
@@ -80,6 +89,10 @@ const SectionHero = () => {
         Built for mobile developers to easily control{<br />}the http flow of
         their apps.
       </Text>
+
+      <Box justify="start" fill="horizontal">
+        <Image src="/assets/ml_hero_illustration_1.svg" fit="contain" fill />
+      </Box>
     </Box>
   );
 };
