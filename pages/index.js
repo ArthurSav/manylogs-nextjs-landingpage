@@ -10,8 +10,8 @@ import {
   Paragraph,
 } from "grommet";
 import Head from "next/head";
-import { styleHeading1, styleHeading2 } from "./theme";
-import { useResponsiveContext } from "./util";
+import { styleHeading1, styleHeading2 } from "../util/theme";
+import { useResponsiveContext } from "../util/util";
 
 export default function Home() {
   return (
@@ -53,7 +53,11 @@ const SectionNavbar = () => {
         round="8px"
         pad="small"
       >
-        <Image src="/assets/manylogs_full_logo_color_1.svg" fit="contain" />
+        <Image
+          src="/assets/manylogs_full_logo_color_1.svg"
+          fit="contain"
+          alt=""
+        />
       </Box>
       <Nav align="center" flex={false} direction="row">
         <Anchor label="Log in" color="light-1" />
@@ -88,7 +92,12 @@ const SectionHero = () => {
       </Text>
 
       <Box justify="start" fill="horizontal">
-        <Image src="/assets/ml_hero_illustration_1.svg" fit="contain" fill />
+        <Image
+          src="/assets/ml_hero_illustration_1.svg"
+          fit="contain"
+          fill
+          alt=""
+        />
       </Box>
     </Box>
   );
@@ -115,7 +124,7 @@ const SectionFeatures = () => {
 
   const Title3 = () => (
     <>
-      Use <u>Replay</u> to reproduce{<br />}the same api responses later.
+      <u>Edit</u> replay responses to fit your needs.
     </>
   );
   const subtitle3 = "Change json values or the response code on the fly.";
@@ -168,7 +177,7 @@ const SectionFeature = ({ title, subtitle, image, direction }) => {
         <Paragraph color="text-weak">{subtitle}</Paragraph>
       </Box>
       <Box>
-        <Image src={image} />
+        <Image src={image} alt="" />
       </Box>
     </Box>
   );
@@ -181,7 +190,7 @@ const SectionFeature = ({ title, subtitle, image, direction }) => {
       align="center"
     >
       <Box>
-        <Image src={image} />
+        <Image src={image} alt="" />
       </Box>
       <Box width="50%" align="end">
         <Box align="start">
@@ -202,7 +211,7 @@ const SectionFeature = ({ title, subtitle, image, direction }) => {
         </Heading>
       </Box>
       <Box>
-        <Image src={image} />
+        <Image src={image} alt="" />
       </Box>
       <Box>
         <Paragraph textAlign="center" color="text-weak">

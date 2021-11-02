@@ -1,5 +1,5 @@
 import { Grommet } from "grommet";
-import { theme } from "./theme";
+import { theme } from "../util/theme";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
