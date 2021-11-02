@@ -123,12 +123,7 @@ const SectionFeatures = () => {
           </Paragraph>
         </Box>
 
-        <Box
-          width="600px"
-          height="600px"
-          background="accent-2"
-          round="medium"
-        />
+        <Image src="/assets/ml_feature_1_record.svg" />
       </Box>
       <Box
         fill="horizontal"
@@ -142,15 +137,10 @@ const SectionFeatures = () => {
             Use <u>Replay</u> to reproduce{<br />}the same api responses later.
           </Heading>
           <Paragraph color="text-weak">
-            You can control everything through the Manylogs dashboard.
+            You can control everything through your dashboard.
           </Paragraph>
         </Box>
-        <Box
-          width="600px"
-          height="600px"
-          background="accent-2"
-          round="medium"
-        />
+        <Image src="/assets/ml_feature_2_replay.svg" />
       </Box>
       <Box
         fill="horizontal"
@@ -167,12 +157,7 @@ const SectionFeatures = () => {
             Change json values or the response code on the fly.
           </Paragraph>
         </Box>
-        <Box
-          width="600px"
-          height="600px"
-          background="accent-2"
-          round="medium"
-        />
+        <Image src="/assets/ml_feature_3_edit.svg" />
       </Box>
     </Box>
   );
