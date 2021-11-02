@@ -9,9 +9,9 @@ import {
   Image,
   Paragraph,
 } from "grommet";
-import { Ad } from "grommet-icons";
 import Head from "next/head";
 import { styleHeading1, styleHeading2 } from "./theme";
+import { useResponsiveContext } from "./util";
 
 export default function Home() {
   return (
@@ -95,6 +95,31 @@ const SectionHero = () => {
 };
 
 const SectionFeatures = () => {
+  const size = useResponsiveContext();
+  const isMobile = size === "small" || size === "xsmall";
+  const Title1 = () => (
+    <>
+      <u>Record</u> your api calls{<br />}as you navigate your app.
+    </>
+  );
+  const subtitle1 =
+    "The Manylogs SDK is installed in your app and works along-side your favorite HTTP client.";
+
+  const Title2 = () => (
+    <>
+      Use <u>Replay</u> to reproduce{<br />}the same api responses later.
+    </>
+  );
+
+  const subtitle2 = "You can control everything through your dashboard.";
+
+  const Title3 = () => (
+    <>
+      Use <u>Replay</u> to reproduce{<br />}the same api responses later.
+    </>
+  );
+  const subtitle3 = "Change json values or the response code on the fly.";
+
   return (
     <Box
       gap="xlarge"
@@ -106,61 +131,95 @@ const SectionFeatures = () => {
       <Heading style={{ fontFamily: "Thicccboi Bold" }}>
         How does it work?
       </Heading>
-      <Box
-        direction="row-responsive"
-        gap="medium"
-        justify="start"
-        align="center"
-        fill="horizontal"
-      >
-        <Box width="50%">
-          <Heading size="medium" level="2" style={{ margin: 0 }}>
-            <u>Record</u> your api calls{<br />}as you navigate your app.
-          </Heading>
-          <Paragraph color="text-weak">
-            The Manylogs SDK is installed in your app and works along-side your
-            favorite HTTP client.
-          </Paragraph>
-        </Box>
+      <SectionFeature
+        title={<Title1 />}
+        subtitle={subtitle1}
+        image="/assets/ml_feature_1_record.svg"
+        direction={isMobile ? "mid" : "right"}
+      />
+      <SectionFeature
+        title={<Title2 />}
+        subtitle={subtitle2}
+        direction={isMobile ? "mid" : "left"}
+        image="/assets/ml_feature_2_replay.svg"
+      />
+      <SectionFeature
+        title={<Title3 />}
+        subtitle={subtitle3}
+        direction={isMobile ? "mid" : "right"}
+        image="/assets/ml_feature_3_edit.svg"
+      />
+    </Box>
+  );
+};
 
-        <Image src="/assets/ml_feature_1_record.svg" />
+const SectionFeature = ({ title, subtitle, image, direction }) => {
+  const DirectionRight = () => (
+    <Box
+      fill="horizontal"
+      direction="row-responsive"
+      gap="medium"
+      align="center"
+    >
+      <Box width="50%" align="start">
+        <Heading size="medium" level="2" style={{ margin: 0 }}>
+          {title}
+        </Heading>
+        <Paragraph color="text-weak">{subtitle}</Paragraph>
       </Box>
-      <Box
-        fill="horizontal"
-        direction="row-responsive"
-        gap="medium"
-        justify="start"
-        align="center"
-      >
-        <Box width="50%">
-          <Heading size="medium" level="2" style={{ margin: 0 }}>
-            Use <u>Replay</u> to reproduce{<br />}the same api responses later.
-          </Heading>
-          <Paragraph color="text-weak">
-            You can control everything through your dashboard.
-          </Paragraph>
-        </Box>
-        <Image src="/assets/ml_feature_2_replay.svg" />
-      </Box>
-      <Box
-        fill="horizontal"
-        direction="row-responsive"
-        gap="medium"
-        justify="start"
-        align="center"
-      >
-        <Box width="50%">
-          <Heading size="medium" level="2" style={{ margin: 0 }}>
-            <u>Edit</u> replay responses to fit your needs.
-          </Heading>
-          <Paragraph color="text-weak">
-            Change json values or the response code on the fly.
-          </Paragraph>
-        </Box>
-        <Image src="/assets/ml_feature_3_edit.svg" />
+      <Box>
+        <Image src={image} />
       </Box>
     </Box>
   );
+
+  const DirectionLeft = () => (
+    <Box
+      fill="horizontal"
+      direction="row-responsive"
+      gap="medium"
+      align="center"
+    >
+      <Box>
+        <Image src={image} />
+      </Box>
+      <Box width="50%" align="end">
+        <Box align="start">
+          <Heading size="medium" level="2" style={{ margin: 0 }}>
+            {title}
+          </Heading>
+          <Paragraph color="text-weak">{subtitle}</Paragraph>
+        </Box>
+      </Box>
+    </Box>
+  );
+
+  const DirectionMid = () => (
+    <Box fill="horizontal" direction="column" justify="center" align="center">
+      <Box align="center" fill="horizontal">
+        <Heading textAlign="center" size="medium" level="2">
+          {title}
+        </Heading>
+      </Box>
+      <Box>
+        <Image src={image} />
+      </Box>
+      <Box>
+        <Paragraph textAlign="center" color="text-weak">
+          {subtitle}
+        </Paragraph>
+      </Box>
+    </Box>
+  );
+
+  switch (direction) {
+    case "right":
+      return <DirectionRight />;
+    case "left":
+      return <DirectionLeft />;
+    default:
+      return <DirectionMid />;
+  }
 };
 
 // Record, Replay & Edit {<br />}your api responses
