@@ -53,11 +53,7 @@ const SectionNavbar = () => {
         round="8px"
         pad="small"
       >
-        <Image
-          src="/assets/manylogs_full_logo_color_1.svg"
-          fit="contain"
-          alt=""
-        />
+        <Image src="/assets/ml_full_logo_all_white.svg" fit="contain" alt="" />
       </Box>
       <Nav align="center" flex={false} direction="row">
         <Anchor label="Log in" color="light-1" />
