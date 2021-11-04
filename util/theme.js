@@ -29,6 +29,23 @@ export const theme = deepMerge(grommet, {
       family: "Thicccboi Medium",
     },
   },
+  button: {
+    default: {},
+    primary: {
+      color: "white",
+      text: {
+        size: "large",
+      },
+      background: "accent-1",
+      border: {
+        radius: "8px",
+      },
+      padding: {
+        vertical: "25px",
+        horizontal: "24px",
+      },
+    },
+  },
 });
 
 // heading
@@ -47,13 +64,5 @@ export const styleHeading2 = {
       family: "Thicccboi Bold, sans-serif",
     },
     extend: textGradient2,
-  },
-};
-
-export const styleSubHeading = {
-  text: {
-    font: {
-      family: "Thicccboi Medium",
-    },
   },
 };

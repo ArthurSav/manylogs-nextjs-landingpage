@@ -8,12 +8,20 @@ import {
   ThemeContext,
   Image,
   Paragraph,
+  Button,
+  Footer,
+  Layer,
+  Stack,
 } from "grommet";
 import Head from "next/head";
 import { styleHeading1, styleHeading2 } from "../util/theme";
+import { GradientBox } from "../util/components";
 import { useResponsiveContext } from "../util/util";
+import { HOST } from "../util/context";
 
 export default function Home() {
+  const size = useResponsiveContext();
+  const isMobile = size === "small" || size === "xsmall";
   return (
     <Box
       flex="grow"
@@ -25,10 +33,12 @@ export default function Home() {
         <title>Manylogs - Record, Replay and edit your api responses</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box fill="vertical" flex="grow">
+      <Box fill="vertical" flex="grow" gap="xlarge">
         <SectionNavbar />
         <SectionHero />
-        <SectionFeatures />
+        <SectionFeatures isMobile={isMobile} />
+        <SectionGetStarted isMobile={isMobile} />
+        <MyFooter />
       </Box>
     </Box>
   );
@@ -56,16 +66,27 @@ const SectionNavbar = () => {
         <Image src="/assets/ml_full_logo_all_white.svg" fit="contain" alt="" />
       </Box>
       <Nav align="center" flex={false} direction="row">
-        <Anchor label="Log in" color="light-1" />
-        <Anchor label="Sign up" />
+        <Anchor label="Log in" color="light-1" href={`${HOST}/login`} />
+        <Anchor label="Sign up" href={`${HOST}/signup`} />
       </Nav>
     </Header>
   );
 };
 
+const MyFooter = () => {
+  const year = new Date().getFullYear();
+  return (
+    <Footer justify="center" pad="small">
+      <Text textAlign="center" size="small">
+        © {year} Copyright Manylogs
+      </Text>
+    </Footer>
+  );
+};
+
 const SectionHero = () => {
   return (
-    <Box align="center" justify="center" margin={{ top: "xlarge" }}>
+    <Box align="center" justify="center">
       <ThemeContext.Extend value={styleHeading1}>
         <Heading margin="none" textAlign="center" size="large">
           Record, Replay & Edit
@@ -99,9 +120,7 @@ const SectionHero = () => {
   );
 };
 
-const SectionFeatures = () => {
-  const size = useResponsiveContext();
-  const isMobile = size === "small" || size === "xsmall";
+const SectionFeatures = ({ isMobile }) => {
   const Title1 = () => (
     <>
       <u>Record</u> your api calls{<br />}as you navigate your app.
@@ -130,7 +149,6 @@ const SectionFeatures = () => {
       gap="xlarge"
       direction="column"
       align="center"
-      margin={{ top: "xlarge" }}
       pad={{ horizontal: "medium", vertical: "large" }}
     >
       <Heading style={{ fontFamily: "Thicccboi Bold" }}>
@@ -225,6 +243,62 @@ const SectionFeature = ({ title, subtitle, image, direction }) => {
     default:
       return <DirectionMid />;
   }
+};
+
+const SectionGetStarted = ({ isMobile }) => {
+  return (
+    <Box pad="medium">
+      <Stack fill>
+        <GradientBox height={isMobile ? "300px" : "small"} />
+        <ComponentGetStarted isMobile={isMobile} />
+      </Stack>
+    </Box>
+  );
+};
+
+const ComponentGetStarted = ({ isMobile }) => {
+  return (
+    <Box
+      direction="row-responsive"
+      align="center"
+      justify={isMobile ? "center" : "start"}
+      gap="large"
+      fill="horizontal"
+      round="medium"
+      border
+      background="background"
+      pad="large"
+    >
+      <Box
+        direction="column"
+        align={isMobile ? "center" : "start"}
+        width={isMobile ? "100%" : "60%"}
+      >
+        <Heading
+          level="2"
+          style={{ fontFamily: "Thicccboi Bold", margin: 0 }}
+          textAlign={isMobile ? "center" : "start"}
+        >
+          Getting started is easy
+        </Heading>
+        <Paragraph color="text-weak" textAlign={isMobile ? "center" : "start"}>
+          Install the SDK in your app and use the Manylogs dashboard to make
+          changes.
+        </Paragraph>
+      </Box>
+
+      <Box width={isMobile ? "100%" : "40%"}>
+        <Button
+          onClick={() => {}}
+          style={{ fontFamily: "Thicccboi Black" }}
+          label="Install SDK"
+          fill
+          primary
+          size="large"
+        />
+      </Box>
+    </Box>
+  );
 };
 
 // Record, Replay & Edit {<br />}your api responses
