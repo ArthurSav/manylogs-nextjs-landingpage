@@ -73,7 +73,7 @@ const SectionNavbar = () => {
       </Box>
       <Nav align="center" flex={false} direction="row">
         <Anchor label="Log in" color="light-1" href={`${HOST}/login`} />
-        {/* <Anchor label="Sign up" href={`${HOST}/signup`} /> */}
+        <Anchor label="Sign up" href={`${HOST}/signup`} />
       </Nav>
     </Header>
   );
