@@ -30,8 +30,14 @@ export default function Home() {
       height={{ min: "100%" }}
     >
       <Head>
-        <title>Manylogs - Record, Replay and edit your api responses</title>
+        <title>Manylogs - Record, Replay and Edit your api responses</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <meta
+          name="description"
+          content="With Manylogs you can record, replay and edit your api responses in Android & iOS. Built for mobile developers to easily control
+the http flow of their apps."
+        />
       </Head>
       <Box fill="vertical" flex="grow" gap="xlarge">
         <SectionNavbar />
