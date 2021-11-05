@@ -66,20 +66,14 @@ export const CustomFonts = () => (
       type="font/woff2"
       crossOrigin="true"
     />
-    <link
+    {/* <link
       rel="preload"
       href="assets/fonts/THICCCBOI-ThicccAF.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="true"
     />
-    <link
-      rel="preload"
-      href="assets/fonts/THICCCBOI-Medium.woff2"
-      as="font"
-      type="font/woff2"
-      crossOrigin="true"
-    />
+
     <link
       rel="preload"
       href="assets/fonts/THICCCBOI-Light.woff2"
@@ -114,7 +108,7 @@ export const CustomFonts = () => (
       as="font"
       type="font/woff2"
       crossOrigin="true"
-    />
+    /> */}
   </>
 );
 
