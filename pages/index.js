@@ -114,10 +114,10 @@ const SectionHero = () => {
         their apps.
       </Text>
 
-      <Box direction="row-responsive">
+      {/* <Box direction="row-responsive">
         <Button label="Demo" primary />
         <Button label="Request Access" secondary />
-      </Box>
+      </Box> */}
 
       <Box justify="start" fill="horizontal">
         <Image
