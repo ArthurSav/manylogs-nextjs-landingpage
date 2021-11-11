@@ -41,7 +41,7 @@ the http flow of their apps."
       </Head>
       <Box fill="vertical" flex="grow" gap="xlarge">
         <SectionNavbar />
-        <SectionHero size={size} />
+        <SectionHero />
         <SectionFeatures isMobile={isMobile} />
         <SectionGetStarted isMobile={isMobile} />
         <MyFooter />
@@ -90,8 +90,7 @@ const MyFooter = () => {
   );
 };
 
-const SectionHero = ({ size }) => {
-  const minHeight = size === "large" || size === "xlarge" ? "xlarge" : "";
+const SectionHero = () => {
   return (
     <Box align="center" justify="center">
       <ThemeContext.Extend value={styleHeading1}>
@@ -120,7 +119,7 @@ const SectionHero = ({ size }) => {
         <Button label="Request Access" secondary />
       </Box>
 
-      <Box justify="start" fill="horizontal" height={{ min: minHeight }}>
+      <Box justify="start" fill="horizontal">
         <Image
           src="/assets/ml_hero_illustration_1.svg"
           fit="contain"
