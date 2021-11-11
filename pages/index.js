@@ -114,7 +114,7 @@ const SectionHero = () => {
         their apps.
       </Text>
 
-      <Box justify="start" fill="horizontal">
+      <Box justify="start" fill="horizontal" height={{ min: "medium" }}>
         <Image
           src="/assets/ml_hero_illustration_1.svg"
           fit="contain"
