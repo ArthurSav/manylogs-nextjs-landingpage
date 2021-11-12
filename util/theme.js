@@ -31,8 +31,22 @@ export const theme = deepMerge(grommet, {
   },
   button: {
     default: {},
+    size: {
+      large: {
+        pad: {
+          vertical: "25px",
+          horizontal: "24px",
+        },
+      },
+      medium: {
+        pad: {
+          vertical: "15px",
+          horizontal: "24px",
+        },
+      },
+    },
     primary: {
-      color: "white",
+      color: "dark-0",
       text: {
         size: "large",
       },
@@ -40,10 +54,16 @@ export const theme = deepMerge(grommet, {
       border: {
         radius: "8px",
       },
-      padding: {
-        vertical: "25px",
-        horizontal: "24px",
+      extend: `letter-spacing: 1px;`,
+    },
+    secondary: {
+      color: "accent-1",
+      border: {
+        color: "accent-1",
+        width: "1px",
+        radius: "8px",
       },
+      extend: `letter-spacing: 1px;`,
     },
   },
 });
@@ -64,5 +84,36 @@ export const styleHeading2 = {
       family: "Thicccboi Bold, sans-serif",
     },
     extend: textGradient2,
+  },
+};
+
+export const themeContexAccessForm = {
+  formField: {
+    border: {
+      side: "all",
+    },
+    round: "4px",
+    label: {
+      size: "small",
+      margin: { bottom: "8px", left: "2px" },
+    },
+    error: {
+      margin: { top: "8px", left: "2px" },
+      size: "small",
+    },
+  },
+  button: {
+    border: {
+      radius: "4px",
+    },
+    padding: {
+      vertical: "10px",
+      horizontal: "24px",
+    },
+  },
+  textInput: {
+    extend: () => `
+      font-weight: 400;
+    `,
   },
 };

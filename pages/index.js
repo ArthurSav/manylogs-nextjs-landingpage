@@ -65,7 +65,7 @@ const SectionNavbar = () => {
         align="center"
         justify="center"
         direction="row-responsive"
-        width="small"
+        width="150px"
         round="8px"
         pad="small"
       >
@@ -108,16 +108,16 @@ const SectionHero = () => {
         size="large"
         textAlign="center"
         color="text-weak"
-        margin={{ top: "large" }}
+        margin={{ top: "medium" }}
       >
         Built for mobile developers to easily control{<br />}the http flow of
         their apps.
       </Text>
 
-      {/* <Box direction="row-responsive">
-        <Button label="Demo" primary />
-        <Button label="Request Access" secondary />
-      </Box> */}
+      <Box direction="row-responsive" margin={{ top: "large" }} gap="medium">
+        <Button label="Request Access" width="large" primary href={`/access`} />
+        <Button label="Book quick Demo" width="large" secondary />
+      </Box>
 
       <Box justify="start" fill="horizontal">
         <Image
