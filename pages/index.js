@@ -10,7 +10,6 @@ import {
   Paragraph,
   Button,
   Footer,
-  Layer,
   Stack,
 } from "grommet";
 import Head from "next/head";
@@ -308,8 +307,8 @@ const ComponentGetStarted = ({ isMobile }) => {
           Get started
         </Heading>
         <Paragraph color="text-weak" textAlign={isMobile ? "center" : "start"}>
-          We're expanding our platform support. Apply for early access to get
-          started with our SDK.
+          We&apos;re expanding our platform support. Apply for early access to
+          get started with our SDK.
         </Paragraph>
       </Box>
 
