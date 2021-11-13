@@ -38,6 +38,15 @@ export default function Home() {
           content="With Manylogs you can record, replay and edit your api responses in Android & iOS. Built for mobile developers to easily control
 the http flow of their apps."
         />
+        <link
+          href="https://assets.calendly.com/assets/external/widget.css"
+          rel="stylesheet"
+        ></link>
+        <script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          type="text/javascript"
+          async
+        ></script>
       </Head>
       <Box fill="vertical" flex="grow" gap="xlarge">
         <SectionNavbar />
@@ -91,6 +100,8 @@ const MyFooter = () => {
 };
 
 const SectionHero = () => {
+  const loadCalendar = () =>
+    Calendly.initPopupWidget({ url: "https://calendly.com/manylogs/15min" });
   return (
     <Box align="center" justify="center">
       <ThemeContext.Extend value={styleHeading1}>
@@ -116,7 +127,12 @@ const SectionHero = () => {
 
       <Box direction="row-responsive" margin={{ top: "large" }} gap="medium">
         <Button label="Request Access" width="large" primary href={`/access`} />
-        <Button label="Book quick Demo" width="large" secondary />
+        <Button
+          label="Book quick Demo"
+          width="large"
+          secondary
+          onClick={loadCalendar}
+        />
       </Box>
 
       <Box justify="start" fill="horizontal">
