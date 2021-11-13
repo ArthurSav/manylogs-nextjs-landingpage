@@ -306,19 +306,18 @@ const ComponentGetStarted = ({ isMobile }) => {
           style={{ fontFamily: "Thicccboi Bold", margin: 0 }}
           textAlign={isMobile ? "center" : "start"}
         >
-          Getting started is easy
+          Get started
         </Heading>
         <Paragraph color="text-weak" textAlign={isMobile ? "center" : "start"}>
-          Install the SDK in your app and use the Manylogs dashboard to make
-          changes.
+          We're expanding our platform support. Apply for early access to get
+          started with our SDK.
         </Paragraph>
       </Box>
 
       <Box width={isMobile ? "100%" : "40%"}>
         <Button
-          onClick={() => {}}
-          style={{ fontFamily: "Thicccboi Black" }}
-          label="Install SDK"
+          href="/access"
+          label="Request Access"
           fill
           primary
           size="large"
