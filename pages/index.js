@@ -29,14 +29,9 @@ export default function Home() {
       height={{ min: "100%" }}
     >
       <Head>
-        <title>Manylogs - Record, Replay and Edit your api responses</title>
+        <Seo />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-        <meta
-          name="description"
-          content="With Manylogs you can record, replay and edit your api responses in Android & iOS. Built for mobile developers to easily control
-the http flow of their apps."
-        />
         <link
           href="https://assets.calendly.com/assets/external/widget.css"
           rel="stylesheet"
@@ -326,3 +321,51 @@ const ComponentGetStarted = ({ isMobile }) => {
 };
 
 // Record, Replay & Edit {<br />}your api responses
+
+// SEO TAGS
+
+const Seo = () => {
+  return (
+    <>
+      {/* Primary Meta Tags */}
+      <title>Record, Replay & Edit your api calls</title>
+      <meta name="title" content="Record, Replay & Edit your api calls" />
+      <meta
+        name="description"
+        content="Manylogs is a tool for mobile developers to easily control the http flow of their Android, iOS or Flutter apps. "
+      />
+
+      {/* <!-- Open Graph / Facebook --> */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://manylogs.com/" />
+      <meta
+        property="og:title"
+        content="Record, Replay & Edit your api calls"
+      />
+      <meta
+        property="og:description"
+        content="Manylogs is a tool for mobile developers to easily control the http flow of their Android, iOS or Flutter apps. "
+      />
+      <meta
+        property="og:image"
+        content="https://manylogs.com/assets/manylogs_seo_preview_1.png"
+      />
+
+      {/* <!-- Twitter --> */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://manylogs.com/" />
+      <meta
+        property="twitter:title"
+        content="Record, Replay & Edit your api calls"
+      />
+      <meta
+        property="twitter:description"
+        content="Manylogs is a tool for mobile developers to easily control the http flow of their Android, iOS or Flutter apps. "
+      />
+      <meta
+        property="twitter:image"
+        content="https://manylogs.com/assets/manylogs_seo_preview_1.png"
+      />
+    </>
+  );
+};
