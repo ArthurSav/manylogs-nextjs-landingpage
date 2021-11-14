@@ -168,14 +168,14 @@ const SectionFeatures = ({ isMobile }) => {
 
   const Title3 = () => (
     <>
-      <u>Edit</u> replay responses to fit your needs.
+      <u>Edit</u> replay responses{<br />}to fit your needs.
     </>
   );
   const subtitle3 = "Change json values or the response code on the fly.";
 
   return (
     <Box
-      gap="xlarge"
+      gap="large"
       direction="column"
       align="center"
       pad={{ horizontal: "medium", vertical: "large" }}
@@ -247,16 +247,16 @@ const SectionFeature = ({ title, subtitle, image, direction }) => {
   );
 
   const DirectionMid = () => (
-    <Box fill="horizontal" direction="column" justify="center" align="center">
+    <Box fill="horizontal" direction="column" pad="medium">
       <Box align="center" fill="horizontal">
         <Heading textAlign="center" size="medium" level="2">
           {title}
         </Heading>
       </Box>
       <Box>
-        <Image src={image} alt="" />
+        <Image src={image} alt="" fit="contain" fill />
       </Box>
-      <Box>
+      <Box align="center">
         <Paragraph textAlign="center" color="text-weak">
           {subtitle}
         </Paragraph>
