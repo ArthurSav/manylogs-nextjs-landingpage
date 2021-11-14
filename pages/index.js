@@ -44,7 +44,7 @@ export default function Home() {
       </Head>
       <Box fill="vertical" flex="grow" gap="xlarge">
         <SectionNavbar />
-        <SectionHero />
+        <SectionHero isMobile={isMobile} />
         <SectionFeatures isMobile={isMobile} />
         <SectionGetStarted isMobile={isMobile} />
         <MyFooter />
@@ -62,7 +62,7 @@ const SectionNavbar = () => {
       justify="between"
       gap="medium"
       fill="horizontal"
-      pad="small"
+      pad="medium"
     >
       <Box
         align="center"
@@ -92,15 +92,23 @@ const MyFooter = () => {
   );
 };
 
-const SectionHero = () => {
+const SectionHero = ({ isMobile }) => {
   const loadCalendar = () =>
     Calendly.initPopupWidget({ url: "https://calendly.com/manylogs/15min" });
+  const ResponsiveTitle = () =>
+    isMobile ? (
+      <Heading margin="none" textAlign="center" size="large">
+        Record, Replay & Edit
+      </Heading>
+    ) : (
+      <Heading margin="none" textAlign="center" size="large">
+        Record, Replay & Edit
+      </Heading>
+    );
   return (
-    <Box align="center" justify="center">
+    <Box align="center" justify="center" pad={{ horizontal: "large" }}>
       <ThemeContext.Extend value={styleHeading1}>
-        <Heading margin="none" textAlign="center" size="large">
-          Record, Replay & Edit
-        </Heading>
+        <ResponsiveTitle />
       </ThemeContext.Extend>
       <ThemeContext.Extend value={styleHeading2}>
         <Heading margin="none" textAlign="center" size="large">
@@ -112,9 +120,10 @@ const SectionHero = () => {
         size="large"
         textAlign="center"
         color="text-weak"
+        wordBreak="normal"
         margin={{ top: "medium" }}
       >
-        Built for mobile developers to easily control{<br />}the http flow of
+        Built for mobile developers{<br />}to easily control the http flow of
         their apps.
       </Text>
 
@@ -128,7 +137,7 @@ const SectionHero = () => {
         />
       </Box>
 
-      <Box justify="start" fill="horizontal">
+      <Box justify="start" fill="horizontal" margin={{ top: "large" }}>
         <Image
           src="/assets/ml_hero_illustration_1.svg"
           fit="contain"
