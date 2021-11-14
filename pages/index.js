@@ -337,7 +337,7 @@ const Seo = () => {
 
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://manylogs.com/" />
+      <meta property="og:url" content="https://www.manylogs.com/" />
       <meta
         property="og:title"
         content="Record, Replay & Edit your api calls"
@@ -353,7 +353,7 @@ const Seo = () => {
 
       {/* <!-- Twitter --> */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://manylogs.com/" />
+      <meta property="twitter:url" content="https://www.manylogs.com/" />
       <meta
         property="twitter:title"
         content="Record, Replay & Edit your api calls"
