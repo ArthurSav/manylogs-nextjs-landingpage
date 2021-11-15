@@ -29,6 +29,7 @@ export default function Home() {
       height={{ min: "100%" }}
     >
       <Head>
+        <title>Record, Replay & Edit your api calls</title>
         <Seo />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
@@ -337,7 +338,6 @@ const Seo = () => {
   return (
     <>
       {/* Primary Meta Tags */}
-      <title>Record, Replay & Edit your api calls</title>
       <meta name="title" content="Record, Replay & Edit your api calls" />
       <meta
         name="description"
